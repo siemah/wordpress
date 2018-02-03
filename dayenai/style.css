@@ -1,0 +1,233 @@
+/*
+Theme Name: Dayen
+Author: Siemah Lsidem
+description: dayen website
+*/
+.jumbotron {
+  height: 600px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.jumbotron::before {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  right: -29px;
+  width: 55%;
+  height: 150px;
+  transform: rotate(-15deg);
+  background: #fff;
+  z-index: 100;
+}
+.jumbotron::after {
+  content: '';
+  position: absolute;
+  bottom: -90px;
+  height: 150px;
+  width: 55%;
+  transform: rotate(15deg);
+  background: #fff;
+  left: -29px;
+  bottom: -83px;
+}
+
+/** some background-color and text color **/
+.gradient-bg {
+    background: linear-gradient(to right, rgba(45,45,45,.3), rgba(5, 105, 200, .2));
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+}
+.dark-blue {
+  color: #182c35;
+}
+
+.main-nav {
+  display: block;
+  width: 100%;
+  clear: both;
+  height: 65px;
+}
+
+.main-nav a {
+  color: #fff;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: .01rem;
+  text-transform: uppercase;
+}
+
+.nav-brand{
+  display: inline-block;
+  height: 100%;
+  width: 20%
+}
+.nav-brand:hover,
+.nav-brand:active{
+  text-decoration: none;
+}
+
+.nav-brand img,
+.nav-brand .website-name{
+  width:  70px;
+  margin: 0 auto;
+  display: block;
+  font-size: 25px;
+  font-family: cursive !important
+}
+.nav-brand .website-name{
+  width: 100%;
+  margin: 0;
+}
+
+.nav-block {
+  display: inline-block;
+  margin: 0;
+  padding-top: 15px;
+  list-style: none;
+  border-bottom: 1px #fff solid;
+  height: 100%;
+  width: 40%;
+}
+
+.nav-item {
+  display: inline-block;
+  height: 100%;
+}
+
+.block {
+  position: relative;
+  clear: both;
+}
+
+.block h3 {
+  color: #fff;
+  font: 30px 'comic sans ms';
+  letter-spacing: .0001em
+}
+
+.block h1 {
+  color: #fff;
+  font: 115px monospace;
+}
+
+.block img {
+  display: block;
+}
+
+.custom-btn {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  z-index: 10;
+  font-weight: 600;
+}
+
+.custom-btn::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  width: 0;
+  transition: all .2s;
+}
+
+.custom-btn:hover,
+.custom-btn:focus,
+.custom-btn:active {
+  text-decoration: none;
+  color: #222;
+  box-shadow: 1px 2px 7px rgba(33,33,33, .4), 1px -2px 15px rgba(33,33,33, .4), -1px 2px 15px rgba(33,33,33, .4), 1px 2px 15px rgba(33,33,33, .4)
+}
+.custom-btn:hover::before{
+  width: 100%;
+  z-index: -1
+}
+
+.slide-container {
+
+}
+
+.well {
+  font-weight: 400;
+  font-size: 30px;
+  color: darkgrey;
+  font-family: cursive;
+}
+
+.display-3 {
+  font-weight: 900;
+  letter-spacing: .02rem;
+}
+
+.carousel {
+  width: 100%;
+  margin: 50px auto;
+}
+.carousel-inner {
+  top: 0;
+  right: 50%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.carousel-inner,
+.carousel-item {
+  height: 300px !important;
+  width: 300px !important;
+}
+
+.carousel-control-next-icon{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23aaa' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23aaa' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
+}
+
+.carousel-item {
+  transform: rotate(-45deg);
+}
+
+.carousel-caption h5 {
+  font-size: 40px;
+  text-shadow: 2px 2px 3px #444;
+  font-family: 'Times New Roman';
+  font-weight: 900;
+}
+.carousel-caption p{
+  color: #ffb101;
+  font-family: 'comic sans ms';
+  font-size: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
