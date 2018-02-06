@@ -3,6 +3,17 @@ Theme Name: Dayen
 Author: Siemah Lsidem
 description: dayen website
 */
+body {
+  animation: fading .5s ease-in;
+  position: relative;
+}
+@keyframes fading {
+  0%{opacity: 0;transform: scale(0);}
+  25%{opacity: .5;transform: scale(.5);}
+  50%{opacity: 1; transform: scale(1);}
+  75%{opacity: .5; transform: scale(1.5);}
+  100%{opacity: 1; transform: scale(1);}
+}
 .jumbotron {
   height: 600px;
   position: relative;
@@ -107,12 +118,40 @@ description: dayen website
 .block h3 {
   color: #fff;
   font: 30px 'comic sans ms';
-  letter-spacing: .0001em
+  letter-spacing: .0001em;
+  z-index: 10;
+  position: relative;
+  padding: 5px;
 }
 
 .block h1 {
   color: #fff;
   font: 115px monospace;
+}
+
+.colorLayer {
+  position: relative;
+  z-index: 10;
+}
+.colorLayer::before {
+  content: '';
+  background: linear-gradient(90deg, rgba(64, 179, 192, 0.65), rgba(87, 190, 136, 0.45));
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  animation: full-width .3s ease-in-out 1s;
+  transition: height .5s ease .2s;
+  border-bottom: 5px solid rgba(64, 179, 192, 1);
+}
+@keyframes full-width {
+  from {height: 0%;opacity: 0;}
+  to{height: 50%;}
+}
+.jumbotron:hover .colorLayer::before {
+  height: 70%;
 }
 
 .block img {
@@ -169,33 +208,11 @@ description: dayen website
   letter-spacing: .02rem;
 }
 
-.carousel {
-  width: 100%;
-  margin: 50px auto;
-}
-.carousel-inner {
-  top: 0;
-  right: 50%;
+.carousel-item{
   left: 50%;
-  bottom: 0;
-  transform: translateX(-50%) rotate(45deg);
-}
-
-.carousel-inner,
-.carousel-item {
-  height: 300px !important;
-  width: 300px !important;
-}
-
-.carousel-control-next-icon{
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23aaa' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-}
-.carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23aaa' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
-}
-
-.carousel-item {
-  transform: rotate(-45deg);
+  transform: translateX(-50%);
+  height: 300px;
+  width: 50%;
 }
 
 .carousel-caption h5 {
@@ -210,11 +227,142 @@ description: dayen website
   font-size: 24px;
 }
 
+/* begin carousel item position */
+
+/* .carousel-item {
+  display: block;
+  float: left;
+  width: 30%;
+}
+.carousel-item.active {
+  position: absolute;
+  width: 40%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 55555;
+} */
+
+/* end carousel item position */
+
+.carousel-control-next-icon {
+  background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23999' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23999' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
+}
+
+.image-description {
+  /* background-image: url('./img/bg-jumbotron.jpg');
+  background-color:  rgba(255, 255, 255, .7) ;
+  background-size: 100% 100%; */
+  position: relative;
+}
+.image-description .col-md-6 {
+  border-right: 1px solid darkgrey;
+}
+.image-description .col-md-6.pt-3 {
+  border: none;
+  border-left: 1px solid darkgrey;
+  right: 1px;
+}
+.image-description .col-md-6:first-child::before,
+.image-description .col-md-6.pt-3::after
+ {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background: darkgrey;
+}
+.image-description .col-md-6.pt-3::after {
+  top: auto;
+  border: 0;
+  left: -5px;
+  right: auto;
+  bottom: 0;
+}
+
+.image-description .col-md-6.pt-3::before{
+  right: auto;
+  left: -5px;
+  top: -10px
+}
+
+.image-description p {
+  font-size: 12px;
+  font-family: cursive;
+}
 
 
+/* analitic */
 
+.analitic {
+  background-size: cover;
+  background-image: url('./img/mountain-night.jpg');
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.analitic::before{
 
+}
 
+.analitic h4 {
+  color: #dedede !important;
+  font-family: 'Times New Roman' !important;
+}
+.analitic h3 {
+  color: #fff;
+  font-size: 60px;
+  letter-spacing: ;
+}
+
+/* analitic row */
+.cercle {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 900;
+  font-family: monospace;
+  box-sizing: content-box;
+  position: relative;
+}
+
+.cercle::before,
+.cercle::after {
+  content: '';
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  bottom: -7px;
+  left: -7px;
+}
+.cercle::after {
+  top: -12px;
+  right: -12px;
+  bottom: -12px;
+  left: -12px;
+  border-width: 1px;
+}
+
+.infos-desc {
+  margin-top: 20px;
+  color: #a9a9a9;
+  font-size: 14px;
+  font-family: 'Times New Roman';
+  font-weight: 400;
+}
 
 
 

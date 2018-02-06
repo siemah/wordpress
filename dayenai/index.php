@@ -38,8 +38,14 @@
         </nav>
         <!-- Some blabla -->
         <div class="block mt-5 pt-5 text-center">
-          <h3>Abrid gh Ain Legradj</h3>
-          <h1>Thala</h1>
+          <h3>
+            <span class="colorLayer">
+              Abrid gh Ain Legradj
+            </span>
+          </h3>
+          <h1>
+            <span class="colorLayer">Thala</span>
+          </h1>
           <!-- <img src="<?= get_template_directory_uri() ?>/img/road.png" class="mb-3 mt-1" alt="road.png"> -->
           <a href="#" class="btn custom-btn pl-4 pr-4 rounded-0">Arewah ghurnegh</a>
         </div>
@@ -51,15 +57,16 @@
     <div class="slide-container mt-5">
 
       <div class="container text-center">
+        <!-- heading -->
         <h4 class="well text-muted">What should i prepared for?</h4>
         <h3 class="display-3 dark-blue">PROGRAM</h3>
-
+        <!-- slide -->
         <div class="carousel slide" data-ride="carousel" id="slide-1">
-          <ol class="carousel-indicators">
+          <!-- <ol class="carousel-indicators">
             <li class="active" data-slide-to='0' data-target='#slide-1'></li>
             <li data-slide-to='1' data-target='#slide-1'></li>
             <li data-slide-to='2' data-target='#slide-1'></li>
-          </ol>
+          </ol> -->
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="<?= get_template_directory_uri() ?>/img/jumbotron-bg.jpg" class="d-block w-100">
@@ -92,14 +99,74 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-
+        <!-- slide image description -->
+        <div class="image-description row mt-5 text-left">
+          <div class="col-md-12">
+            <p class="col-md-6 float-left text-muted pt-5 mb-0 mr-0">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip .
+            </p>
+          </div>
+          <div class="col-md-12">
+            <p class="col-md-6 float-right text-muted pt-3 mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
       </div>
 
 
     </div>
 
-
-
+    <div class="analitic mt-5">
+      <div class="container text-center pt-5">
+        <!-- heading -->
+        <h4 class="well text-muted">Are you ready to overpass yout capacities?</h4>
+        <h3 class="display-3 dark-blue">CHALLENGE</h3>
+        <!-- some infos -->
+        <div class="infos row mt-5">
+          <div class="col-sm-3">
+            <div class="cercle text-center p-4">
+              <div class="number ">8848</div>
+              <div class="unite">M</div>
+            </div>
+            <div class="infos-desc">
+              lorem ipsumd dolor sit amer
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="cercle text-center p-4">
+              <div class="number">8848</div>
+              <div class="unite">M</div>
+            </div>
+            <div class="infos-desc">
+              lorem ipsumd dolor sit amer amek dayen a winathan
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="cercle text-center p-4">
+              <div class="number">8848</div>
+              <div class="unite">M</div>
+            </div>
+            <div class="infos-desc">
+              lorem ipsumd dolor sit amer am
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="cercle text-center p-4">
+              <div class="number">8848</div>
+              <div class="unite">M</div>
+            </div>
+            <div class="infos-desc">
+              lorem ipsumd dolor
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <?php wp_footer() ?>
   </body>
